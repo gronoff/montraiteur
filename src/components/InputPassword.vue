@@ -1,18 +1,17 @@
 <template>
   <div class="inputForm">
-    <label :for="id" :style="`padding-top:${paddingTop};`">{{ label }}</label>
-    <input type="text" :name="id" :id="id" :placeholder="placeholder" required>
+    <label :for="id">{{ label }}</label>
+    <input type="password" :name="id" :id="id" minlength="8" :placeholder="placeholder" required>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'InputText',
+  name: 'InputPassword',
   props: {
     label: String,
     id: String,
-    placeholder: String,
-    paddingTop: String
+    placeholder: String
   }
 }
 </script>
