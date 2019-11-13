@@ -40,23 +40,27 @@ p{
 }
 footer div{
   display: inline;
+  vertical-align: center;
 }
+
 img{
   width: 2em;
   height: 2em;
 }
-span{
-  margin-left: 1em;
-  margin-right: 1%;
-  margin-top: 1em;
-}
+
 .contact_rgpd p {
-  display: inline;
+  display: inline-block;
 }
+
+.contact_rgpd img{
+  display: inline-block;
+}
+
 .social_network_icons{
   float: right;
   margin-top: 1em;
 }
+
 .social_network_icons img{
   display: inline;
   margin-right: 1em;
