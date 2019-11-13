@@ -22,5 +22,12 @@ export default {
     cursor:pointer;
     font-size: 14px;
     color: #7A7D7D;
+    transition: background 500ms;
+  }
+  button:hover {
+    background: grey;
+  }
+  button:active {
+    box-shadow: none;
   }
 </style>
