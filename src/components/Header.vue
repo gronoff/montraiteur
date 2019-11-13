@@ -1,16 +1,17 @@
 <template>
   <header class="flex-container">
     <img
-      src="../assets/logo_principal_traiteur.png"
+      src="../assets/img/logo_principal_traiteur.png"
       alt="logo_mon_traiteur"
       height="177"
       width="206"
     />
 
-    <p>
-      <a :href= traiteur.link >{{ traiteur.name }}</a>
-    </p>
-    <p><a :href= connect.link >{{ connect.name }}</a></p>
+    <div>
+    <a :href="traiteur.link">{{ traiteur.name }}</a>
+
+    <a :href="connect.link">{{ connect.name }}</a>
+    </div>
   </header>
 </template>
 
@@ -18,7 +19,13 @@
 .flex-container {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;   
 }
+a{
+  color: var(--grisFonce);
+}
+
 </style>
 
 <script>

@@ -1,0 +1,29 @@
+@font-face{
+    font-family: karma;
+    src: url(../fonts/karma.ttf);
+}
+
+@font-face{
+    font-family:  meie;
+    src: url(../fonts/MeieScript-Regular.ttf);
+
+}
+
+*{
+    --grisClair: #fffbfe;
+    --grisFonce: #7a7d7d;
+    --vertClair: #d2e0bf;
+    --vertFonce: #729ea1;
+    --noir: black;
+
+}
+
+body{
+    font-family: karma;
+
+}
+
+a{
+    text-decoration: none;
+}
+
