@@ -31,13 +31,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-@font-face {
-  font-family: karma;
-  src: "../assets/fonts/karma.ttf";
-}
-
 p{
-  font-family: karma;
+  color:#7A7D7D;
 }
 
 .footer{
@@ -55,8 +50,9 @@ img{
   height: 2em;
 }
 
-.contact_rgpd span{
+span{
   margin-left: 1em;
+  margin-right: 1%;
   margin-top: 1em;
 }
 
@@ -72,5 +68,5 @@ img{
 .social_network_icons img{
   display: inline;
   margin-right: 1em;
-  }
+}
 </style>
