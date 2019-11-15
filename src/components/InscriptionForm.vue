@@ -3,12 +3,12 @@
     <h2>Me créer un compte utilisateur</h2>
     <form action="" method="post">
       <div class="backgroundForm">
-        <InputText label="Prénom" id="firstName" paddingTop="30px" />
-        <InputText label="Nom" id="lastName" />
-        <InputText label="Adresse postale" id="adress" placeholder="rue, code postal, ville" />
-        <InputText label="Téléphone" id="phone" />
-        <InputEmail label="Courriel" id="email" />
-        <InputPassword label="Mot de passe" id="password" placeholder="8 caractères minimum" />
+        <Input type="text" label="Prénom" id="firstName" paddingTop="30px" />
+        <Input type="text" label="Nom" id="lastName" />
+        <Input type="text" label="Adresse postale" id="adress" placeholder="rue, code postal, ville" />
+        <Input type="tel" label="Téléphone" id="phone" minlength="10" />
+        <Input type="email" label="Courriel *" id="email" required="true" />
+        <Input type="password" label="Mot de passe *" id="password" placeholder="8 caractères minimum" minlength="8" required="true" />
       </div>
       <ul>
         <li>
@@ -23,17 +23,13 @@
 </template>
 
 <script>
-import InputText from './InputText'
-import InputEmail from './InputEmail'
-import InputPassword from './InputPassword'
+import Input from './Input'
 import Button from './Button'
 
 export default {
   name: 'InscriptionForm',
   components: {
-    InputText,
-    InputEmail,
-    InputPassword,
+    Input,
     Button
   }
 }

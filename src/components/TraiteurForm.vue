@@ -2,15 +2,73 @@
   <div>
     <h2>Créer une fiche traiteur</h2>
     <form action="" method="post">
-      <div class="backgroundForm">
-        <InputText label="Nom de l'entreprise" id="name" paddingTop="30px" />
-        <InputText label="SIRET" id="siret" />
-        <InputText label="Adresse postale" id="adress" placeholder="rue, code postal, ville" />
-        <InputText label="Téléphone" id="phone" />
-        <InputEmail label="Courriel" id="email" />
+      <fieldset class="backgroundForm">
+        <legend>Coordonnées</legend>
+        <Input type="text" label="Nom de l'entreprise" id="name" paddingTop="30px" required="true" />
+        <Input type="text" label="SIRET" id="siret" required="true" />
+        <Input type="text" label="Adresse postale" id="adress" placeholder="rue, code postal, ville" required="true" />
+        <Input type="tel" label="Téléphone" id="phone" minlength="10" required="true" />
+        <Input type="email" label="Courriel" id="email" required="true" />
         <InputTextArea label="Description" id="description" />
+        <Input type="url" label="Photo" id="photo" required="true" />
+      </fieldset>
+      <fieldset class="backgroundForm">
+        <legend>Produits</legend>
+        <div class="category">
+          <span>Sélectionnez une ou plusieurs catégories :</span><br>
 
-      </div>
+          <input type="checkbox" name="category" id="traditionnel" />
+          <label for="traditionnel">Traditionnel</label>
+          <br>
+
+          <input type="checkbox" name="category" id="asiatique" />
+          <label for="asiatique">Asiatique</label>
+          <br>
+
+          <input type="checkbox" name="category" id="italien" />
+          <label for="italien">Italien</label>
+          <br>
+
+          <input type="checkbox" name="category" id="espagnol" />
+          <label for="espagnol">Espagnol</label>
+          <br>
+
+          <input type="checkbox" name="category" id="bio" />
+          <label for="bio">Bio</label>
+          <br>
+
+          <input type="checkbox" name="category" id="vegan" />
+          <label for="vegan">Vegan</label>
+          <br>
+          
+        </div>
+        <div class="category">
+          <span>Sélectionnez un ou plusieurs événements :</span><br>
+
+          <input type="checkbox" name="event" id="mariage" />
+          <label for="mariage">Mariage</label>
+          <Input type="number" label="Prix par personne" id="mariagePrice" display="inline-block" />
+          <br>
+
+          <input type="checkbox" name="event" id="cocktail" />
+          <label for="cocktail">Cocktail</label>
+          <Input tyoe="number" label="Prix par personne" id="cocktailPrice" display="inline-block" />
+          <br>
+
+          <input type="checkbox" name="event" id="barmitzvah" />
+          <label for="barmitzvah">Bar Mitzvah</label>
+          <Input type="number" label="Prix par personne" id="barmitzvahPrice" display="inline-block" />
+          <br>
+
+          <input type="checkbox" name="event" id="anniversaire" />
+          <label for="anniversaire">Anniversaire</label>
+          <Input type="number" label="Prix par personne" id="anniversairePrice" display="inline-block" />
+          <br>
+
+        </div>
+        <Input type="number" label="Nombre de couverts minimum" id="minCouverts" value="1" display="inline-block" />
+        <Input type="number" label="Nombre de couverts maximum" id="minCouverts" value="1" display="inline-block" />
+      </fieldset>
       <ul>
         <li>
           <Button txt="Envoyer" type="submit" />
@@ -24,16 +82,14 @@
 </template>
 
 <script>
-import InputText from './InputText'
-import InputEmail from './InputEmail'
+import Input from './Input'
 import InputTextArea from './InputTextArea'
 import Button from './Button'
 
 export default {
   name: 'TraiteurForm',
   components: {
-    InputText,
-    InputEmail,
+    Input,
     InputTextArea,
     Button
   }
@@ -44,6 +100,8 @@ export default {
   h2 {
     margin-left: 14px;
     font-size: 24px;
+  }
+  h2, legend {
     color: var(--grisFonce);
   }
   .backgroundForm {
@@ -51,6 +109,7 @@ export default {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 6px;
     margin-bottom: 30px;
+    border: 0;
   }
   form:first-child {
     margin-top: 30px;

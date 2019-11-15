@@ -1,17 +1,23 @@
 <template>
-  <div class="inputForm">
-    <label :for="id">{{ label }}</label>
-    <input type="password" :name="id" :id="id" minlength="8" :placeholder="placeholder" required>
+  <div class="inputForm" :style="`display:${display};`">
+    <label :for="id" :style="`padding-top:${paddingTop};`">{{ label }}</label>
+    <input :type="type" :name="id" :id="id" :placeholder="placeholder" :value="value" :minlength="minlength" :required="required">
   </div>
 </template>
 
 <script>
 export default {
-  name: 'InputPassword',
+  name: 'Input',
   props: {
+    type: String,
     label: String,
     id: String,
-    placeholder: String
+    placeholder: String,
+    paddingTop: String,
+    display: String,
+    value: Number,
+    minlength: Number,
+    required: Boolean
   }
 }
 </script>
