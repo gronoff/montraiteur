@@ -1,15 +1,16 @@
 <template>
   <header class="flex-container">
+    
+    <a target="_blank" href="_blank">
     <img
       src="../assets/img/logo_principal_traiteur.png"
       alt="logo_mon_traiteur"
-      height="177"
-      width="206"
     />
+    </a>
 
-    <div>
+    <div class="liens">
     <a :href="traiteur.link">{{ traiteur.name }}</a>
-
+    <span>|</span>
     <a :href="connect.link">{{ connect.name }}</a>
     </div>
   </header>
@@ -26,6 +27,32 @@ a{
   color: var(--grisFonce);
 }
 
+a:hover{
+  color: burlywood;
+}
+
+img{ 
+  height: 177px;
+
+}
+
+
+.liens{
+  margin-top: 77px;
+  margin-right: 20px;
+ 
+}
+
+header{
+   background-color: var(--grisClair);
+}
+
+span{
+  padding-left: 2em;
+  padding-right: 2em;
+  color: var(--grisFonce);
+}
+
 </style>
 
 <script>
@@ -39,7 +66,7 @@ export default {
       },
 
       connect: {
-        name: "connection",
+        name: "Connection",
         link: "href"
       }
     };

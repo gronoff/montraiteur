@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import HelloWorld from './components/HelloWorld'
+import Home from './components/Home'
 import TestAdrien from './components/TestAdrien'
 import TestDimitri from './components/TestDimitri'
 import TestAude from './components/TestAude'
@@ -10,9 +10,9 @@ Vue.use(Router);
 export default new Router({
   routes: [
     {
-      name: 'HelloWorld',
+      name: 'home',
       path: '/',
-      component: HelloWorld
+      component: Home
     },
     {
       name: 'TestAdrien',
