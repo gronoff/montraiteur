@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header />
     <h2>Créer une fiche traiteur</h2>
     <form action="" method="post">
       <fieldset class="backgroundForm">
@@ -17,51 +18,30 @@
         <div class="category">
           <span>Sélectionnez une ou plusieurs catégories :</span><br>
 
-          <input type="checkbox" name="category" id="traditionnel" />
-          <label for="traditionnel">Traditionnel</label>
-          <br>
-
-          <input type="checkbox" name="category" id="asiatique" />
-          <label for="asiatique">Asiatique</label>
-          <br>
-
-          <input type="checkbox" name="category" id="italien" />
-          <label for="italien">Italien</label>
-          <br>
-
-          <input type="checkbox" name="category" id="espagnol" />
-          <label for="espagnol">Espagnol</label>
-          <br>
-
-          <input type="checkbox" name="category" id="bio" />
-          <label for="bio">Bio</label>
-          <br>
-
-          <input type="checkbox" name="category" id="vegan" />
-          <label for="vegan">Vegan</label>
-          <br>
+          <InputCheckbox name="category" id="traditionnel" label="Traditionnel" display="block" paddingTop="14px" />
+          <InputCheckbox name="category" id="asiatique" label="Asiatique" display="block" />
+          <InputCheckbox name="category" id="italien" label="Italien" display="block" />
+          <InputCheckbox name="category" id="espagnol" label="Espagnol" display="block" />
+          <InputCheckbox name="category" id="bio" label="Bio" display="block" />
+          <InputCheckbox name="category" id="vegan" label="Vegan" display="block" />
           
         </div>
-        <div class="category">
+        <div class="event">
           <span>Sélectionnez un ou plusieurs événements :</span><br>
 
-          <input type="checkbox" name="event" id="mariage" />
-          <label for="mariage">Mariage</label>
+          <InputCheckbox name="event" id="mariage" label="Mariage" />
           <Input type="number" label="Prix par personne" id="mariagePrice" display="inline-block" />
           <br>
 
-          <input type="checkbox" name="event" id="cocktail" />
-          <label for="cocktail">Cocktail</label>
-          <Input tyoe="number" label="Prix par personne" id="cocktailPrice" display="inline-block" />
+          <InputCheckbox name="event" id="cocktail" label="Cocktail" />
+          <Input type="number" label="Prix par personne" id="cocktailPrice" display="inline-block" />
           <br>
 
-          <input type="checkbox" name="event" id="barmitzvah" />
-          <label for="barmitzvah">Bar Mitzvah</label>
+          <InputCheckbox name="event" id="barmitzvah" label="Bar Mitzvah" />
           <Input type="number" label="Prix par personne" id="barmitzvahPrice" display="inline-block" />
           <br>
 
-          <input type="checkbox" name="event" id="anniversaire" />
-          <label for="anniversaire">Anniversaire</label>
+          <InputCheckbox name="event" id="anniversaire" label="Anniversaire" />
           <Input type="number" label="Prix par personne" id="anniversairePrice" display="inline-block" />
           <br>
 
@@ -78,20 +58,27 @@
         </li>
       </ul>
     </form>
+    <Footer />
   </div>
 </template>
 
 <script>
+import Header from './Header'
 import Input from './Input'
 import InputTextArea from './InputTextArea'
+import InputCheckbox from './InputCheckbox'
 import Button from './Button'
+import Footer from './Footer'
 
 export default {
   name: 'TraiteurForm',
   components: {
+    Header,
     Input,
     InputTextArea,
-    Button
+    InputCheckbox,
+    Button,
+    Footer
   }
 }
 </script>
@@ -101,8 +88,12 @@ export default {
     margin-left: 14px;
     font-size: 24px;
   }
-  h2, legend {
+  h2, legend, span {
     color: var(--grisFonce);
+  }
+  span {
+    font-size: 14px;
+    line-height: 24px;
   }
   .backgroundForm {
     background: var(--vertClair);
@@ -113,6 +104,9 @@ export default {
   }
   form:first-child {
     margin-top: 30px;
+  }
+  div.category, div.event {
+    margin-top: 14px;
   }
   ul {
     display: flex;

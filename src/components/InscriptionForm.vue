@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header />
     <h2>Me créer un compte utilisateur</h2>
     <form action="" method="post">
       <div class="backgroundForm">
@@ -19,18 +20,23 @@
         </li>
       </ul>
     </form>
+    <Footer />
   </div>
 </template>
 
 <script>
+import Header from './Header'
 import Input from './Input'
 import Button from './Button'
+import Footer from './Footer'
 
 export default {
   name: 'InscriptionForm',
   components: {
+    Header,
     Input,
-    Button
+    Button,
+    Footer
   }
 }
 </script>
