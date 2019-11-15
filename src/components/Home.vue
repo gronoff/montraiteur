@@ -3,7 +3,7 @@
     <Header />
     <section class="principale">
       <form>
-        <input type="text" name="" id="">
+        <InputSearch id="idSearch" type="search" label="Entrez en contact avec les meilleurs traiteurs près de chez vous" placeholder="lieu de l'événement"/>
       </form>
     </section>
     <Footer />
@@ -13,29 +13,23 @@
 <script>
 
 import Header from './Header.vue';
-import Footer from './Footer.vue'
+import Footer from './Footer.vue';
+import InputSearch from './InputSearch.vue'
 
 export default {
   name: 'home',
-  components : {Header,Footer
-  }
+  components : {Header,Footer,InputSearch
+  },
+  // customStyle: {color: 'red'}
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style scoped>
 .principale{
   display: flex;
   justify-content: center;
   margin: 50px;
+} 
 
-  padding:5px 15px;
-    background: #D2E0BF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
-    border:0 none;
-    cursor:pointer;
-    font-size: 14px;
-    color: #7A7D7D;
-}
 </style>

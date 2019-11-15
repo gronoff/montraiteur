@@ -1,7 +1,7 @@
 <template>
   <div class="inputForm">
     <label :for="id" :style="`padding-top:${paddingTop};`">{{ label }}</label>
-    <input type="text" :name="id" :id="id" :placeholder="placeholder" required>
+    <input type="text" :name="id" :style="`box-shadow:${boxShadow};`" :id="id" :placeholder="placeholder" required>
   </div>
 </template>
 
@@ -12,7 +12,8 @@ export default {
     label: String,
     id: String,
     placeholder: String,
-    paddingTop: String
+    paddingTop: String,
+    boxShadow: String
   }
 }
 </script>
