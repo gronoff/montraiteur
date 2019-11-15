@@ -34,11 +34,13 @@ p{
   color:#7A7D7D;
 }
 .footer{
+  clear: both;
   width: 100%;
   height:4em;
   background-color: #E6E5E5;
 }
 footer div{
+  clear: both;
   display: inline;
   vertical-align: center;
 }

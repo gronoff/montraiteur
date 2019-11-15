@@ -1,19 +1,24 @@
 <template>
   <div class="cards">
-    <div v-for="(card, id) of cards" :key="id">
+    <div v-for="(card, id) of cards" :key="id" :class="moduloClass(id)">
       <img :src="card.lien_image">
       <div>
         <h4>{{ card.titre }}</h4>
-        <p>{{ card.description }}</p> 
+        <p>{{ card.description }}</p>
+        <Button txt="Demander un devis"/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Button from "./Button"
 export default {
   name: 'card',
-    props: {
+  components:{
+    Button
+  },
+  props: {
     id: Number,
     titre: String,
     lien_image: String,
@@ -33,7 +38,7 @@ export default {
             },
             {
                 id: 2,
-                titre: "Parigo Bobo Burgers Traiteur",
+                titre: "Parigo Bobo Traiteur",
                 description: "C'est cher, c'est pas bon, il n'y a rien à manger, c'est bobo, c'est Parisien, donc ça ne peut que marcher... Venez lâcher votre flooz les pigeons !",
                 lien_image: "http://www.ldc-halal.com/ressources/images-restaurants/restaurant-214-2.jpg?version=636245852231970000",
                 note_prix: 0,
@@ -48,6 +53,16 @@ export default {
             }
         ]
     }
+  },
+  methods:{
+    moduloClass: function(id){
+      if(id%2 == 0){
+        return "cardA"
+      }
+      else{
+        return "cardB"
+      }
+    }
   }
 }
 </script>
@@ -56,29 +71,51 @@ export default {
 <style scoped>
 
 .cards div{
-  height: 180px;
-  background-color: #F1F1F1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 250px;
   border-radius: 10px;
-  padding: 2%;
-  vertical-align: center;
+  align-items: center;
+}
+
+.cardA{
+  background-color: #FFFBFE;
+}
+
+.cardB{
+  background-color: #F1F1F1;
+}
+
+.cardA div{
+  border: 2px solid #F1F1F1;
 }
 
 .cards div div{
-  width: 75%;
-  height: 100%;
+  display: block;
+  height: 95%;
   background-color: #FFFBFE;
-  float: right;
   border-radius: 10px;
+  margin-right: 1%;
+  flex-basis: 65%;
 }
 
 .cards div p, h4{
   margin-left: 2%;
 }
 
+button{
+  display: block;
+  margin-right: 1%;
+  margin-left: auto;
+  margin-bottom: 1%;
+  margin-top: auto;
+}
+
 .cards div img{
-  float: left;
-  width: 20%;
-  border-radius: 10px;
+  height: 95%;
+  width: auto;
+  flex-basis: 32%;
 }
 
 </style>
