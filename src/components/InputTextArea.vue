@@ -1,13 +1,13 @@
 <template>
   <div class="inputForm">
     <label :for="id">{{ label }}</label>
-    <input type="email" :name="id" :id="id" required>
+    <textarea :name="id" :id="id" rows="5" required />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'InputEmail',
+  name: 'InputTextArea',
   props: {
     label: String,
     id: String
@@ -25,12 +25,14 @@ export default {
     line-height: 24px;
     color: var(--grisFonce);
   }
-  input {
+  textarea {
     width: 90%;
-    height: 30px;
     background: var(--grisClair);
     border-radius: 5px;
     border: none;
     margin-bottom: 30px;
+  }
+  ::placeholder {
+    color: #D2E0BF;
   }
 </style>

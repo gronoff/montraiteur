@@ -24,12 +24,12 @@ export default {
     display: block;
     font-size: 14px;
     line-height: 24px;
-    color: #7A7D7D;
+    color: var(--grisFonce);
   }
   input {
     width: 90%;
     height: 30px;
-    background: #FFFBFE;
+    background: var(--grisClair);
     border-radius: 5px;
     border: none;
     margin-bottom: 30px;

@@ -1,14 +1,15 @@
 <template>
   <div>
-    <h2>Me créer un compte utilisateur</h2>
+    <h2>Créer une fiche traiteur</h2>
     <form action="" method="post">
       <div class="backgroundForm">
-        <InputText label="Prénom" id="firstName" paddingTop="30px" />
-        <InputText label="Nom" id="lastName" />
+        <InputText label="Nom de l'entreprise" id="name" paddingTop="30px" />
+        <InputText label="SIRET" id="siret" />
         <InputText label="Adresse postale" id="adress" placeholder="rue, code postal, ville" />
         <InputText label="Téléphone" id="phone" />
         <InputEmail label="Courriel" id="email" />
-        <InputPassword label="Mot de passe" id="password" placeholder="8 caractères minimum" />
+        <InputTextArea label="Description" id="description" />
+
       </div>
       <ul>
         <li>
@@ -25,15 +26,15 @@
 <script>
 import InputText from './InputText'
 import InputEmail from './InputEmail'
-import InputPassword from './InputPassword'
+import InputTextArea from './InputTextArea'
 import Button from './Button'
 
 export default {
-  name: 'InscriptionForm',
+  name: 'TraiteurForm',
   components: {
     InputText,
     InputEmail,
-    InputPassword,
+    InputTextArea,
     Button
   }
 }
