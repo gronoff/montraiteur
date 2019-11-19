@@ -1,7 +1,7 @@
 <template>
   <div class="inputForm" :style="`display:${display}; margin-left:${marginLeft}`" >
     <label :for="id" :style="`padding-top:${paddingTop};`">{{ label }}</label>
-    <input :type="type" :name="id" :id="id" :placeholder="placeholder" :value="value" :minlength="minlength" :required="required">
+    <input :type="type" :name="id" :id="id" :placeholder="placeholder" :value="value" :minlength="minlength" :required="required" :disabled="disabled">
   </div>
 </template>
 
@@ -16,9 +16,10 @@ export default {
     placeholder: String,
     paddingTop: String,
     display: String,
-    value: Number,
+    value: String,
     minlength: Number,
-    required: Boolean
+    required: Boolean,
+    disabled: Boolean
   }
 }
 </script>

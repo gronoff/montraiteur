@@ -51,7 +51,7 @@
           <Input type="number" label="Nombre de couverts maximum" id="minCouverts" value="1" display="inline-block" />
 
           <div class="calendar">
-            <label>Disponiblités</label>
+            <label>Disponibilités</label>
             <img src="../assets/img/calendar1.png">
             <img src="../assets/img/calendar2.png">
           </div>
@@ -102,6 +102,7 @@ export default {
   span {
     font-size: 14px;
     line-height: 24px;
+    margin-left: 30px;
   }
   .backgroundForm {
     background: var(--vertClair);

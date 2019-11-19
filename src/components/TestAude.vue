@@ -1,17 +1,20 @@
 <template>
   <div>
     <h1>Aude</h1>
-    <CarouselForNinon />
+    <RecapDevis />
+    <TraiteurForm />
   </div>
 </template>
 
 <script>
-import CarouselForNinon from './CarouselForNinon'
+import RecapDevis from './RecapDevis'
+import TraiteurForm from './TraiteurForm'
 
 export default {
   name: 'TestAude',
   components: {
-    CarouselForNinon
+    RecapDevis,
+    TraiteurForm
   }
 }
 </script>
