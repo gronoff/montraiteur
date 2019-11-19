@@ -1,7 +1,7 @@
 <template>
   <header class="flex-container">
     
-    <a target="_blank" href="_blank">
+    <a target="_blank" href="/">
     <img
       src="../assets/img/logo_principal_traiteur.png"
       alt="logo_mon_traiteur"
@@ -16,7 +16,7 @@
   </header>
 </template>
 
-<style>
+<style scoped>
 .flex-container {
   display: flex;
   flex-direction: row;
@@ -67,7 +67,7 @@ export default {
 
       connect: {
         name: "Connection",
-        link: "href"
+        link: "/#/inscription"
       }
     };
   }
