@@ -6,6 +6,7 @@ import TraiteurForm from './components/TraiteurForm'
 import TestAdrien from './components/TestAdrien'
 import TestDimitri from './components/TestDimitri'
 import TestAude from './components/TestAude'
+import TestNinon from './components/TestNinon'
 
 Vue.use(Router);
 
@@ -40,6 +41,11 @@ export default new Router({
       name: 'TestAude',
       path: '/aude',
       component: TestAude
+    },
+    {
+      name: 'TestNinon',
+      path: '/ninon',
+      component: TestNinon
     }
   ]
 });
