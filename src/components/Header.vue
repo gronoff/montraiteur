@@ -16,7 +16,7 @@
   </header>
 </template>
 
-<style>
+<style scoped>
 .flex-container {
   display: flex;
   flex-direction: row;

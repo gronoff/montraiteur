@@ -1,4 +1,7 @@
 <template>
+    <div>
+        <H1>EspaceClient</H1>
+    </div>
     
 </template>
 
