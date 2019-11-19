@@ -19,23 +19,24 @@
       <div class="cbzh-slide_text"><span>Des produits locaux</span><br />Nous privilégions le développement durable et les traiteurs près de chez vous</div>
     </div>
     
-    <a id="cbzh-slides_0" v-on:click="currentSlide(0)">o</a>
-    <a id="cbzh-slides_1" v-on:click="currentSlide(1)">o</a>
-    <a id="cbzh-slides_2" v-on:click="currentSlide(2)">o</a>
+    <a class="cbzh-slides_prev" v-on:click="plusSlides(-1)">&#10094;</a>
+    <a class="cbzh-slides_next" v-on:click="plusSlides(1)">&#10095;</a>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Carousel',
+  name: 'CarouselForNinon',
   data: function() {
     return {
       slideIndex: 1
     }
   },
   methods: {
+    plusSlides: function(n) {
+      this.cbzh_slides(this.slideIndex += n);
+    },
     currentSlide: function(n) {
-      //event.target.style.color = "#7a7d7d";
       this.cbzh_slides(this.slideIndex = n);
     },
     cbzh_slides: function(n) {
@@ -48,7 +49,7 @@ export default {
           slides[i].style.display = "none"; 
       }
       slides[this.slideIndex-1].style.display = "block"; 
-    }
+    },
   },
   mounted() {
     this.cbzh_slides(this.slideIndex);
@@ -67,30 +68,31 @@ export default {
     display: none;
   }
 
-  #cbzh-slides_0,
-  #cbzh-slides_1,
-  #cbzh-slides_2 {
+  .cbzh-slides_prev,
+  .cbzh-slides_next {
     cursor: pointer;
     position: absolute;
-    bottom: 14px;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
     color: var(--grisClair);
+    font-weight: bold;
     font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: transparent;
   }
 
-  #cbzh-slides_0:hover,
-  #cbzh-slides_1:hover,
-  #cbzh-slides_2:hover {
-    color: var(--grisFonce);
+  .cbzh-slides_next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
   }
 
-  #cbzh-slides_0 {
-    left: 48%;
-  }
-  #cbzh-slides_1 {
-    left: 50%;
-  }
-  #cbzh-slides_2 {
-    left: 52%;
+  .cbzh-slides_prev:hover,
+  .cbzh-slides_next:hover {
+    background-color: var(--grisFonce);
   }
 
   .cbzh-slide_text span {
