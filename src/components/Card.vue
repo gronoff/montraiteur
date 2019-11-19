@@ -1,11 +1,12 @@
 <template>
   <div class="cards">
     <div v-for="(card, id) of cards" :key="id" :class="moduloClass(id)">
-      <img :src="card.lien_image">
+      <img class="imageTraiteur" :src="card.lien_image">
       <div>
         <h4>{{ card.titre }}</h4>
         <p>{{ card.description }}</p>
         <Button txt="Demander un devis"/>
+        <HeartButton class="heartButton"/>
       </div>
     </div>
   </div>
@@ -13,10 +14,12 @@
 
 <script>
 import Button from "./Button"
+import HeartButton from "./HeartButton"
 export default {
   name: 'card',
   components:{
-    Button
+    Button,
+    HeartButton
   },
   props: {
     id: Number,
@@ -77,6 +80,7 @@ export default {
   min-height: 250px;
   border-radius: 10px;
   align-items: center;
+  position: relative;
 }
 
 .cardA{
@@ -106,16 +110,22 @@ export default {
 
 button{
   display: block;
-  margin-right: 1%;
-  margin-left: auto;
-  margin-bottom: 1%;
-  margin-top: auto;
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
 }
 
-.cards div img{
+.imageTraiteur{
   height: 95%;
   width: auto;
   flex-basis: 32%;
+}
+
+.heartButton{
+  display: block;
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
 }
 
 </style>

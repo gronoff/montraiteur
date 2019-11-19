@@ -1,25 +1,27 @@
 <template>
   <div>
     <Header />
-    <h2>Me créer un compte utilisateur</h2>
-    <form action="" method="post">
-      <div class="backgroundForm">
-        <Input type="text" label="Prénom" id="firstName" paddingTop="30px" />
-        <Input type="text" label="Nom" id="lastName" />
-        <Input type="text" label="Adresse postale" id="adress" placeholder="rue, code postal, ville" />
-        <Input type="tel" label="Téléphone" id="phone" minlength="10" />
-        <Input type="email" label="Courriel *" id="email" required="true" />
-        <Input type="password" label="Mot de passe *" id="password" placeholder="8 caractères minimum" minlength="8" required="true" />
-      </div>
-      <ul>
-        <li>
-          <Button txt="Envoyer" type="submit" />
-        </li>
-        <li style="margin-left: 30px;">
-          <Button txt="Annuler" type="reset" />
-        </li>
-      </ul>
-    </form>
+    <div class="form">
+      <h2>Me créer un compte utilisateur</h2>
+      <form action="" method="post">
+        <div class="backgroundForm">
+          <Input type="text" label="Prénom" id="firstName" paddingTop="30px" />
+          <Input type="text" label="Nom" id="lastName" />
+          <Input type="text" label="Adresse postale" id="adress" placeholder="rue, code postal, ville" />
+          <Input type="tel" label="Téléphone" id="phone" minlength="10" />
+          <Input type="email" label="Courriel *" id="email" required="true" />
+          <Input type="password" label="Mot de passe *" id="password" placeholder="8 caractères minimum" minlength="8" required="true" />
+        </div>
+        <ul>
+          <li>
+            <Button txt="Annuler" type="reset" />
+          </li>
+          <li style="margin-left: 30px;">
+            <Button txt="Envoyer" type="submit" />
+          </li>
+        </ul>
+      </form>
+    </div>
     <Footer />
   </div>
 </template>
@@ -53,6 +55,11 @@ export default {
     border-radius: 6px;
     margin-bottom: 30px;
   }
+  .form, ul {
+    margin: 0 auto;
+    width: 70%;
+    min-width: 300px;
+  }
   form:first-child {
     margin-top: 30px;
   }
@@ -61,9 +68,6 @@ export default {
     justify-content: center;
     list-style: none;
     padding: 0;
-  }
-  .backgroundForm, ul {
-    width: 70%;
-    min-width: 300px;
+    margin-bottom: 30px;
   }
 </style>
