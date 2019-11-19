@@ -96,7 +96,6 @@ export default {
 .card{
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
   justify-content: space-between;
   border-radius: 10px;
   align-items: center;
@@ -123,7 +122,9 @@ export default {
   background-color: #FFFBFE;
   border-radius: 10px;
   margin-right: 1%;
-  flex-basis: 75%;
+  flex-basis: auto;
+  width: 75%;
+  min-width: 250px;
 }
 
 .imageTraiteur{
@@ -134,6 +135,11 @@ export default {
   flex-basis: 250px;
   margin: 1%;
   align-items: center;
+}
+
+.imageTraiteur>img{
+  max-width:100%;
+  max-height:100%;
 }
 
 .cards div p, .logo_titre{
