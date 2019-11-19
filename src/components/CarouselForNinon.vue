@@ -2,21 +2,21 @@
   <div class="cbzh-slides">
 
     <div class="cbzh-slide fade">
-      <img src="https://cdn.discordapp.com/attachments/643738813419749386/643804179810484225/drinks-1283608_1920.jpg" style="width:100%; height: 60vh;">
+      <img src="../assets/img/ImgCarousel/MinestroneButternut.jpg" style="width:100%; height: 432px;">
       <div class="overlay"></div>
-      <div class="cbzh-slide_text"><span>Ils nous ont fait confiance</span><br />La mairie de Brest, Kate Middleton</div>
+      <div class="cbzh-slide_text"><span>Minestrone et Butternut</span><br />Le Langon, Vendée</div>
     </div>
 
     <div class="cbzh-slide fade">
-      <img src="https://cdn.discordapp.com/attachments/643738813419749386/643807510595239947/eat-2834549_1920.jpg" style="width:100%; height: 60vh;">
+      <img src="../assets/img/ImgCarousel/1.jpg" style="width:100%; height: 432px;">
       <div class="overlay"></div>
-      <div class="cbzh-slide_text"><span>Nos valeurs</span><br />Des produits sains réalisés par des artisans de talent</div>
+      <div class="cbzh-slide_text"><span>Aux Délices d'Ignacio</span><br />Perpignan, Pyrénées Orientales</div>
     </div>
 
     <div class="cbzh-slide fade">
-      <img src="https://cdn.discordapp.com/attachments/643738813419749386/643807511895605258/barley-field-1684052_1920.jpg" style="width:100%; height: 60vh;">
+      <img src="../assets/img/ImgCarousel/2.jpg" style="width:100%; height: 432px;">
       <div class="overlay"></div>
-      <div class="cbzh-slide_text"><span>Des produits locaux</span><br />Nous privilégions le développement durable et les traiteurs près de chez vous</div>
+      <div class="cbzh-slide_text"><span>Parigo Bobo Burger Traiteur</span><br />Paris, centre du Monde</div>
     </div>
     
     <a class="cbzh-slides_prev" v-on:click="plusSlides(-1)">&#10094;</a>
@@ -60,7 +60,8 @@ export default {
 <style scoped>
   /* SLIDES */
   .cbzh-slides {
-    max-width: 100%;
+    width: 779px;
+    height: 432px;
     position: relative;
   }
 
