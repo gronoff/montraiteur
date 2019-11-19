@@ -1,12 +1,21 @@
 <template>
   <div class="cards">
-    <div v-for="(card, id) of cards" :key="id" :class="moduloClass(id)">
-      <img class="imageTraiteur" :src="card.lien_image">
-      <div>
-        <h4>{{ card.titre }}</h4>
+    <div class="card" v-for="(card, id) of cards" :key="id" :class="moduloClass(id)">
+      <div class="imageTraiteur">
+        <img :src="card.lien_image">
+      </div>
+      <div class="descriptionTraiteur">
+        <div class="logo_titre">
+          <img class="logo_mon_traiteur" src="../assets/img/logo_mon_traiteur.png" alt="logo_mon_traiteur">
+          <h4>{{ card.titre }}</h4>
+        </div>
         <p>{{ card.description }}</p>
-        <Button txt="Demander un devis"/>
-        <HeartButton class="heartButton"/>
+        <div class="buttons">
+          <HeartButton class="heartButton"/>
+          <img class="price_rate" src="../assets/img/price_rate.svg"/>
+          <img class="taste_rate" src="../assets/img/taste_rate.svg"/>
+          <Button class="buttonDevis" txt="Demander un devis"/>
+        </div>
       </div>
     </div>
   </div>
@@ -73,14 +82,23 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.cards div{
+.logo_titre{
+  display: flex;
+  flex-direction: row;
+}
+
+.logo_mon_traiteur{
+  display: block;
+  height: 2em;
+  width: auto;
+}
+
+.card{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  min-height: 250px;
   border-radius: 10px;
   align-items: center;
-  position: relative;
 }
 
 .cardA{
@@ -91,41 +109,61 @@ export default {
   background-color: #F1F1F1;
 }
 
-.cardA div{
+.cardA>div{
   border: 2px solid #F1F1F1;
 }
 
-.cards div div{
-  display: block;
+.descriptionTraiteur{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   height: 95%;
+  min-height: 250px;
   background-color: #FFFBFE;
   border-radius: 10px;
   margin-right: 1%;
-  flex-basis: 65%;
-}
-
-.cards div p, h4{
-  margin-left: 2%;
-}
-
-button{
-  display: block;
-  position: absolute;
-  bottom: 1em;
-  right: 1em;
+  flex-basis: auto;
+  width: 75%;
+  min-width: 250px;
 }
 
 .imageTraiteur{
-  height: 95%;
-  width: auto;
-  flex-basis: 32%;
+  display: flex;
+  min-height: 250px;
+  background-color: #FFFBFE;
+  border-radius: 10px;
+  flex-basis: 250px;
+  margin: 1%;
+  align-items: center;
+}
+
+.imageTraiteur>img{
+  max-width:100%;
+  max-height:100%;
+}
+
+.cards div p, .logo_titre{
+  margin-left: 2%;
+}
+
+.buttonDevis{
+  display: flex;
+}
+
+.buttons{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .heartButton{
-  display: block;
-  position: absolute;
-  bottom: 1em;
-  left: 1em;
+  position: flex;
+}
+
+.price_rate, .taste_rate{
+  display: flex;
+  height: 2em;
+  width: auto;
 }
 
 </style>
