@@ -1,5 +1,5 @@
 <template>
-  <div class="inputForm" :style="`display:${display}; padding-top:${paddingTop};`">
+  <div class="inputForm" :style="`display:${display}; padding-top:${paddingTop}; width:${width};`" >
     <input type="checkbox" :name="name" :id="id" />
     <label :for="id">{{ label }}</label>
   </div>
@@ -13,6 +13,7 @@ export default {
     id: String,
     name: String,
     display: String,
+    width: String,
     paddingTop: String
   }
 }

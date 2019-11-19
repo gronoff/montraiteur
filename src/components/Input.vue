@@ -1,5 +1,5 @@
 <template>
-  <div class="inputForm" :style="`display:${display};`">
+  <div class="inputForm" :style="`display:${display}; margin-left:${marginLeft}`" >
     <label :for="id" :style="`padding-top:${paddingTop};`">{{ label }}</label>
     <input :type="type" :name="id" :id="id" :placeholder="placeholder" :value="value" :minlength="minlength" :required="required">
   </div>
@@ -10,6 +10,7 @@ export default {
   name: 'Input',
   props: {
     type: String,
+    marginLeft: String,
     label: String,
     id: String,
     placeholder: String,
