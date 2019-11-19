@@ -7,6 +7,7 @@ import TestAdrien from './components/TestAdrien'
 import TestDimitri from './components/TestDimitri'
 import TestAude from './components/TestAude'
 import TestNinon from './components/TestNinon'
+import EspaceClient from './components/EspaceClient'
 
 Vue.use(Router);
 
@@ -46,6 +47,12 @@ export default new Router({
       name: 'TestNinon',
       path: '/ninon',
       component: TestNinon
+    },
+    {
+      name: 'EspaceClient',
+      path: '/espaceclient',
+      component: EspaceClient
+
     }
   ]
 });

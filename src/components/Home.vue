@@ -13,6 +13,7 @@
         />
       </form>
     </section>
+    <Carousel/>
     <Footer />
   </div>
 </template>
@@ -21,10 +22,11 @@
 import Header from "./Header.vue";
 import Footer from "./Footer.vue";
 import InputSearch from "./InputSearch.vue";
+import Carousel from "./Carousel";
 
 export default {
   name: "home",
-  components: { Header, Footer, InputSearch }
+  components: { Header, Footer, InputSearch, Carousel }
 };
 
 

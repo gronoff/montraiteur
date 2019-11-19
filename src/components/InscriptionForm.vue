@@ -3,7 +3,7 @@
     <Header />
     <div class="form">
       <h2>Me créer un compte utilisateur</h2>
-      <form action="" method="post">
+      <form action="" method="">
         <div class="backgroundForm">
           <Input type="text" label="Prénom" id="firstName" paddingTop="30px" />
           <Input type="text" label="Nom" id="lastName" />
@@ -17,7 +17,11 @@
             <Button txt="Annuler" type="reset" />
           </li>
           <li style="margin-left: 30px;">
-            <Button txt="Envoyer" type="submit" />
+            <router-link to="/espaceclient">
+            <Button txt="Envoyer"
+            
+            />
+            </router-link>
           </li>
         </ul>
       </form>

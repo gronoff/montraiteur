@@ -9,9 +9,10 @@
     </a>
 
     <div class="liens">
-    <a :href="traiteur.link">{{ traiteur.name }}</a>
+    <a href="mailto:">{{traiteur.name}}</a>
     <span>|</span>
-    <a :href="connect.link">{{ connect.name }}</a>
+    
+    <router-link to='inscription'>Connection</router-link>
     </div>
   </header>
 </template>

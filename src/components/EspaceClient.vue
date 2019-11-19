@@ -1,6 +1,6 @@
 <template>
   <div>
-    
+    <Header/>
     <nav>Mon compte</nav>
 
     <div class="flex-container">
@@ -25,14 +25,18 @@
     </article>
     </div>
     
+    <Footer/>
   </div>
 </template>
 
 <script>
 import Button from './Button'
+import Header from './Header'
+import Footer from './Footer'
+
 export default {
   name: "EspaceClient",
-  components: {Button},
+  components: {Header, Button, Footer},
   data: function() {
     return {
       commands: [
