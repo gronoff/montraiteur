@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Header />
     <div class="form">
       <h2>Créer une fiche traiteur</h2>
       <form action="" method="post">
@@ -66,27 +65,22 @@
         </ul>
       </form>
     </div>
-    <Footer />
   </div>
 </template>
 
 <script>
-import Header from './Header'
 import Input from './Input'
 import InputTextArea from './InputTextArea'
 import InputCheckbox from './InputCheckbox'
 import Button from './Button'
-import Footer from './Footer'
 
 export default {
   name: 'TraiteurForm',
   components: {
-    Header,
     Input,
     InputTextArea,
     InputCheckbox,
-    Button,
-    Footer
+    Button
   }
 }
 </script>

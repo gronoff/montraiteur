@@ -28,7 +28,9 @@
         </div>
         <ul>
           <li>
-            <Button txt="Annuler" />
+            <router-link to="/">
+              <Button txt="Annuler" />
+            </router-link>
           </li>
           <li style="margin-left: 30px;">
             <Button txt="Envoyer" />
