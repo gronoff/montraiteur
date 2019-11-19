@@ -52,8 +52,8 @@
 
           <div class="calendar">
             <label>Disponiblités</label>
-            <img src="../assets/image/calendar1.png">
-            <img src="../assets/image/calendar2.png">
+            <img src="../assets/img/calendar1.png">
+            <img src="../assets/img/calendar2.png">
           </div>
         </fieldset>
         <ul>
