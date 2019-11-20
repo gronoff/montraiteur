@@ -1,59 +1,82 @@
 <template>
   <header class="flex-container">
     
-    <a target="_blank" href="/">
-    <img
-      src="../assets/img/logo_principal_traiteur.png"
-      alt="logo_mon_traiteur"
-    />
+    <a id="lienImg" href="/">
+      <img
+        src="../assets/img/logo_principal_traiteur.png"
+        alt="logo_mon_traiteur"
+      />
     </a>
 
     <div class="liens">
-    <a href="mailto:">{{traiteur.name}}</a>
-    <span>|</span>
-    
-    <router-link to='inscription'>Connection</router-link>
+      <a href="mailto:" class="lienTxt">{{traiteur.name}}</a>
+      <span>|</span>
+      <router-link to='inscription' class="lienTxt">Connection</router-link>
     </div>
+
   </header>
 </template>
 
 <style scoped>
-.flex-container {
+header.flex-container {
+  position: relative;
+  height: 90px;
+  background-color: var(--grisClair);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;   
 }
-a{
+
+#lienImg {
+  height: 90px;
+}
+
+a {
   color: var(--grisFonce);
 }
 
-a:hover{
+a:hover {
   color: burlywood;
 }
 
-img{ 
+img {
+  position: relative;
+  top: -50px;
   height: 177px;
-
 }
 
-
-.liens{
-  margin-top: 77px;
+.liens {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 13px;
   margin-right: 20px;
- 
 }
 
-header{
-   background-color: var(--grisClair);
-}
-
-span{
+span {
   padding-left: 2em;
   padding-right: 2em;
   color: var(--grisFonce);
 }
 
+@media (max-width: 420px) {
+  header.flex-container {
+    height: 200px;
+    justify-content: center;
+  }
+  .liens {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .lienTxt {
+    text-align: center;
+    font-size: 14px;
+    padding-top: 13px;
+  }
+  span {
+    display: none;
+  }
+}
 </style>
 
 <script>
