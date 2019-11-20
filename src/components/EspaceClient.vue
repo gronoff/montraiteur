@@ -19,14 +19,21 @@
         </li>
       </ul>
     </aside>
+
+    <div class="grille">
     <section> 
         <CarouselForNinon />
 
     </section>
     <article>
+        <div class="monProfil">
         <p> Mon Profil </p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quos ad corrupti ut possimus autem facere quisquam numquam sunt itaque nulla, amet quia, minima quod, assumenda cumque id veniam odit?</p>
+        <p> Bonjour. </p>
+        <p> Jean Dupont </p>
+        <p> Rue de Brest 29200 Brest</p>
+        </div>
     </article>
+    </div>
     </div>
     
     <Footer/>
@@ -77,18 +84,20 @@ export default {
   background-color: rgba(210, 224, 191, 0.5);
   color: rgba(114, 158, 161, 0.7);
   
-  margin: 15px;
+  margin-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
 }
 
 .flex-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-p {
-    margin-left: 5px
-}
+
 
 ul {
   list-style: none;
@@ -102,6 +111,15 @@ li {
 nav {
     color: #729EA1;
     height: 41px;
+}
+
+.monProfil{
+  background-color: #F1F1F1;
+  color: #729EA1;
+  margin-left : 0px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 </style>
