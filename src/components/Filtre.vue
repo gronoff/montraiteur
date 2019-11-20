@@ -80,7 +80,16 @@ export default {
   height: 200px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
-  margin-bottom: 1%;
+  margin-bottom: 2%;
+}
+
+#filter select {
+  width: 90%;
+  height: 30px;
+  background: var(--grisClair);
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 30px;
 }
 
 img{
@@ -114,7 +123,6 @@ img{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 30px;
   font-size: 14px;
   line-height: 24px;
   color: var(--grisFonce);
@@ -136,16 +144,21 @@ img{
   }
 
   #select_boxes{
-    align-items: center;
-    margin-left: 0;
+    align-items: flex-start;
+    margin-left: 10px;
   }
 
   .inputForm{
     margin-left: 0;
+    width: 100%;
+  }
+
+  input{
+    width: 95%;
   }
 
   #price_range>img{
-    width: 180px;
+    width: 250px;
   }
 
 }
