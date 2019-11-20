@@ -5,7 +5,7 @@
       <h2>Récapitulatif de votre devis</h2>
       <form>
         <div class="backgroundForm">
-          <Input type="text" label="Nom de l'entreprise" id="name" paddingTop="30px" required="true" value="Aux délices d’Ignacio" />
+          <Input type="text" label="Nom de l'entreprise" id="name" paddingTop="30px" required="true" value="Aux délices d’Ignacio" disabled="true"/>
 
           <div class="category">
             <span>Traiteur</span>
@@ -28,7 +28,7 @@
         </div>
         <ul>
           <li>
-            <router-link to="/">
+            <router-link to="/resultat">
               <Button txt="Annuler" />
             </router-link>
           </li>

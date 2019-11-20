@@ -3,7 +3,7 @@
     
     <a id="lienImg" href="/">
       <img
-        src="../assets/img/logo.png"
+        src="../assets/img/logonoir.png"
         alt="logo_mon_traiteur"
       />
     </a>
