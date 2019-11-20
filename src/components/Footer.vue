@@ -41,8 +41,6 @@ export default {
 
   span {
     padding: 8px;
-    border: 2px solid #F1F1F1;
-    border-radius: 10px;
   }
 
   footer {

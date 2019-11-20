@@ -3,7 +3,7 @@
     
     <a id="lienImg" href="/">
       <img
-        src="../assets/img/logo_principal_traiteur.png"
+        src="../assets/img/logo.png"
         alt="logo_mon_traiteur"
       />
     </a>
@@ -11,7 +11,18 @@
     <div class="liens">
       <a href="mailto:" class="lienTxt">{{traiteur.name}}</a>
       <span>|</span>
-      <router-link to='inscription' class="lienTxt">Connexion</router-link>
+      <router-link to='inscription' class="lienTxt"
+       v-if="$route.name=='home'">
+        <p>Connexion</p>
+      </router-link>
+      <router-link to='inscription' class="lienTxt"
+       v-else-if="$route.name=='inscription'">
+        <p>Connexion</p>
+      </router-link>
+      <router-link to='EspaceClient' class="lienTxt"
+       v-else>
+        <p>Mon compte</p>
+      </router-link>
     </div>
 
   </header>
@@ -40,10 +51,12 @@ a:hover {
   color: burlywood;
 }
 
+p {
+  margin: 0;
+}
+
 img {
-  position: relative;
-  top: -50px;
-  height: 177px;
+  height: 90px;
 }
 
 .liens {
@@ -87,13 +100,11 @@ export default {
       traiteur: {
         name: "Vous êtes traiteur, rejoignez-nous",
         link: "href"
-      },
-
-      connect: {
-        name: "Connection",
-        link: "/#/inscription"
       }
     };
+  },
+  props: {
+    txt: String
   }
 };
 </script>
