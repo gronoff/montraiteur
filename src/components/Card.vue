@@ -115,6 +115,10 @@ export default {
   border: 2px solid #F1F1F1;
 }
 
+.cardB>div{
+  border: 2px solid transparent;
+}
+
 .descriptionTraiteur{
   display: flex;
   flex-direction: column;
