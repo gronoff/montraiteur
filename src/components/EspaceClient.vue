@@ -74,6 +74,8 @@ export default {
 .barre_laterale {
   background-color: rgba(210, 224, 191, 0.5);
   color: rgba(114, 158, 161, 0.7);
+  
+  margin: 15px;
 }
 
 .flex-container {
