@@ -1,10 +1,8 @@
 <template>
-    <a target="_blank" href="/">
     <img
       src="../assets/img/jumbotron.jpg"
-      alt="logo_mon_traiteur"
+      alt="jolie image de bonbons"
     />
-    </a>
 </template>
 
 <script>

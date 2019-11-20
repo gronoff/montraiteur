@@ -2,19 +2,19 @@
   <div class="cbzh-slides">
 
     <div class="cbzh-slide fade">
-      <img src="../assets/img/ImgCarousel/MinestroneButternut.jpg" style="width:100%; height: 432px;">
+      <img src="../assets/img/ImgCarousel/MinestroneButternut.jpg" style="height: 432px;">
       <div class="overlay"></div>
       <div class="cbzh-slide_text"><span>Minestrone et Butternut</span><br />Le Langon, Vendée</div>
     </div>
 
     <div class="cbzh-slide fade">
-      <img src="../assets/img/ImgCarousel/1.jpg" style="width:100%; height: 432px;">
+      <img src="../assets/img/ImgCarousel/1.jpg" style="height: 432px;">
       <div class="overlay"></div>
       <div class="cbzh-slide_text"><span>Aux Délices d'Ignacio</span><br />Perpignan, Pyrénées Orientales</div>
     </div>
 
     <div class="cbzh-slide fade">
-      <img src="../assets/img/ImgCarousel/2.jpg" style="width:100%; height: 432px;">
+      <img src="../assets/img/ImgCarousel/2.jpg" style="height: 432px;">
       <div class="overlay"></div>
       <div class="cbzh-slide_text"><span>Parigo Bobo Burger Traiteur</span><br />Paris, centre du Monde</div>
     </div>

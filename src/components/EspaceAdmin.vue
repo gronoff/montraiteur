@@ -11,19 +11,15 @@
       <p>Menu</p> <br/>
       <ul>
         <li> <p> Demande d'ajouts - traiteurs </p>
-          <br />
           <Button txt="voir"/>
         </li>
         <li> <p> formulaire d'ajout - traiteurs </p>
-          <br />
-          <Button txt="ajouter" v-on:click="$router.push({ name: 'NewTraiteur' })"/>
+          <button v-on:click="$router.push({ name: 'NewTraiteur' })">ajouter</button>
         </li>
         <li> <p> fiches traiteurs </p>
-          <br />
           <Button txt="voir"/>
         </li>
         <li> <p> fiches consommateurs </p>
-          <br />
           <Button txt="voir"/>
         </li>
       </ul>
@@ -34,9 +30,9 @@
     <section v-else-if="$route.name=='NewTraiteur'">
         <router-view />
     </section>
+    </div>
     <div class="listingClients">
       <img src=../assets/img/listingclients.png>
-    </div>
     </div>
     
     <Footer/>
@@ -60,29 +56,25 @@ export default {
 .barre_laterale {
   background-color: rgba(247, 245, 247, 100%);
   color: rgba(114, 158, 161, 0.7);
-  margin-bottom: 5px;
+  margin-bottom: 15px;
+  padding-right: 25px;
 }
 
 .flex-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-direction: row;
   flex-wrap: wrap;
-}
-
-p {
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 ul {
   list-style: none;
   margin-left: 0;
-  padding-left: 10;
-  margin-right: 10px;
+  padding-left: 5;
+  margin-right: 5px;
 }
 li {
-  margin-bottom: 5px; /* à adapter */
+  margin-bottom: 25px; /* à adapter */
 }
 
 nav {
@@ -91,13 +83,30 @@ nav {
   padding: 5px;
   margin: 5px;
 }
-
 button {
-  margin-bottom: 7px;
-}
+    padding: 8px 15px 6px 15px;
+    background: var(--vertClair);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    border:0 none;
+    cursor:pointer;
+    font-family: karma;
+    font-size: 14px;
+    color: var(--grisFonce);
+    transition: background 500ms;
+    margin-bottom: 7px;
+  }
+  button:hover {
+    background: var(--grisClair);
+  }
+  button:active {
+    box-shadow: none;
+  }
 
 .listingClients {
   margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
 }
 
 .jumbotron {
