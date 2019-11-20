@@ -9,13 +9,22 @@
     <div class="flex-container">
     <aside class="barre_laterale">
       <p>Menu</p> <br/>
-      <button v-on:click="$router.push({ name: 'NewTraiteur' })">test</button>
       <ul>
-        <li v-for="(command,name) in commands" :key="name">
-          {{command.name}}
+        <li> <p> Demande d'ajouts - traiteurs </p>
           <br />
-          <Button txt="voir" v-on:click="test"/>
-          <Button txt="modifier" type="submit" />
+          <Button txt="voir"/>
+        </li>
+        <li> <p> formulaire d'ajout - traiteurs </p>
+          <br />
+          <Button txt="ajouter" v-on:click="$router.push({ name: 'NewTraiteur' })"/>
+        </li>
+        <li> <p> fiches traiteurs </p>
+          <br />
+          <Button txt="voir"/>
+        </li>
+        <li> <p> fiches consommateurs </p>
+          <br />
+          <Button txt="voir"/>
         </li>
       </ul>
     </aside>
@@ -43,30 +52,7 @@ import Jumbotron from './Jumbotron.vue'
 
 export default {
   name: "EspaceAdmin",
-  components: {Header, Button, Footer, CarouselForNinon, Jumbotron},
-  data: function() {
-    return {
-      commands: [
-        {
-          name: "voir mes demande d'ajouts - traiteurs",
-        },
-        {
-          name: "formulaire d'ajout - traiteurs",
-        },
-        {
-          name: "fiches traiteurs",
-        },
-        {
-          name: "fiches clients",
-        }
-      ]
-    };
-  },
-  methods: {
-    test: function() {
-      window.alert("test")
-    }
-  }
+  components: {Header, Button, Footer, CarouselForNinon, Jumbotron}
 };
 </script>
 
@@ -74,7 +60,7 @@ export default {
 .barre_laterale {
   background-color: rgba(247, 245, 247, 100%);
   color: rgba(114, 158, 161, 0.7);
-  margin-bottom: 30px;
+  margin-bottom: 5px;
 }
 
 .flex-container {
@@ -96,9 +82,7 @@ ul {
   margin-right: 10px;
 }
 li {
-  margin-bottom: 25px; /* à adapter */
-  padding: 10px;
-  margin: 10px;
+  margin-bottom: 5px; /* à adapter */
 }
 
 nav {
@@ -109,8 +93,7 @@ nav {
 }
 
 button {
-  padding: 7px;
-  margin: 7px;
+  margin-bottom: 7px;
 }
 
 .listingClients {
