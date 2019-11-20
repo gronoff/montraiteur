@@ -14,7 +14,9 @@
           <HeartButton class="heartButton"/>
           <img class="price_rate" src="../assets/img/price_rate.svg"/>
           <img class="taste_rate" src="../assets/img/taste_rate.svg"/>
-          <Button class="buttonDevis" txt="Demander un devis"/>
+          <router-link to="/recapdevis">
+            <Button class="buttonDevis" txt="Demander un devis"/>
+          </router-link>
         </div>
       </div>
     </div>
@@ -69,10 +71,10 @@ export default {
   methods:{
     moduloClass: function(id){
       if(id%2 == 0){
-        return "cardA"
+        return "cardB"
       }
       else{
-        return "cardB"
+        return "cardA"
       }
     }
   }

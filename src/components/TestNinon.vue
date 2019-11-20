@@ -1,18 +1,14 @@
 <template>
   <div>
     <h1>Neewee</h1>
-    <PageNumber txt="page 2 sur 7"/>
-    <Jumbotron/>
-    <CarouselForNinon/>
+    <EspaceAdmin/>
   </div>
 </template>
 
 <script>
-import PageNumber from './PageNumber.vue'
-import Jumbotron from './Jumbotron.vue'
-import CarouselForNinon from './CarouselForNinon.vue'
+import EspaceAdmin from './EspaceAdmin.vue'
 export default {
   name: 'TestNinon',
-  components:{PageNumber, Jumbotron, CarouselForNinon}
+  components:{EspaceAdmin}
 }
 </script>

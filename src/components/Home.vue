@@ -6,10 +6,10 @@
         <InputSearch
           id="idSearch"
           type="search"
-          label="Entrez en contact avec les meilleurs traiteurs près de chez vous"
-          placeholder="lieu de l'événement"
+          label="Entrez en contact avec les meilleurs traiteurs près de chez vous ..."
+          placeholder="Lieu de l'événement ?"
           name="s"
-          results=5
+        
 
           
         />
