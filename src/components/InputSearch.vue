@@ -12,7 +12,7 @@
       <br />
       <div class="recherche">
         <input :type="type" :name="name" :placeholder="placeholder" />
-        <router-link to="home">
+        <router-link to="resultat">
           <img src="../assets/img/loupe.png" alt="loupe" />
         </router-link>
       </div>

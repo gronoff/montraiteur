@@ -11,6 +11,7 @@ import EspaceClient from './components/EspaceClient'
 import RecapDevis from './components/RecapDevis'
 import Wait from './components/Wait'
 import EspaceAdmin from './components/EspaceAdmin'
+import Resultat from './components/Resultat'
 
 Vue.use(Router);
 
@@ -73,6 +74,11 @@ export default new Router({
           component: TraiteurForm
         }
       ]
+    },
+    {
+      name: 'Resultat',
+      path: '/resultat',
+      component: Resultat
     },
   ]
 });
