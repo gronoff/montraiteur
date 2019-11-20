@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer>
     <div class="contact_rgpd">
       <a href="url">
         <span>
@@ -30,41 +30,71 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-p{
-  color:#7A7D7D;
-}
-.footer{
-  clear: both;
-  width: 100%;
-  height:4em;
-  background-color: #E6E5E5;
-}
-footer div{
-  clear: both;
-  display: inline;
-  vertical-align: center;
-}
+  p {
+    margin: 0;
+    color:var(--grisFonce);
+  }
 
-img{
-  width: 2em;
-  height: 2em;
-}
+  a {
+    margin-left: 13px;
+  }
 
-.contact_rgpd p {
-  display: inline-block;
-}
+  span {
+    padding: 8px;
+    border: 2px solid #F1F1F1;
+    border-radius: 10px;
+  }
 
-.contact_rgpd img{
-  display: inline-block;
-}
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #E6E5E5;
+  }
 
-.social_network_icons{
-  float: right;
-  margin-top: 1em;
-}
+  footer div {
+    clear: both;
+    display: inline;
+    vertical-align: center;
+  }
 
-.social_network_icons img{
-  display: inline;
-  margin-right: 1em;
-}
+  img {
+    width: 2em;
+    height: 2em;
+  }
+
+  .contact_rgpd p, img, a {
+    position: relative;
+    display: inline-block;
+  }
+
+  .contact_rgpd img {
+    top: 10px;
+  }
+
+  .social_network_icons{
+    float: right;
+    margin-top: 10px;
+    margin-bottom: 8px;
+  }
+
+  .social_network_icons img {
+    display: inline;
+    margin: 0 10px;
+  }
+
+  @media (max-width: 470px) {
+    footer.footer {
+      justify-content: center;
+    }
+    footer div {
+      margin: 0 auto;
+    }
+    .social_network_icons {
+      padding-top: 10px;
+    }
+    a:first-child {
+      margin-left: 0;
+    }
+  }
 </style>
