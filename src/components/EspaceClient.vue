@@ -56,22 +56,22 @@ export default {
         {
           id: 1,
           date: "20-11-2019",
-          prix: "25"
+          prix: "250"
         },
         {
           id: 2,
           date: "30-11-2019",
-          prix: "50"
+          prix: "500"
         },
         {
           id: 3,
           date: "02-12-2019",
-          prix: "100"
+          prix: "1000"
         },
         {
           id: 4,
           date: "04-05-2015",
-          prix: "250"
+          prix: "2500"
         }
       ]
     };
