@@ -9,6 +9,7 @@ import TestAude from './components/TestAude'
 import TestNinon from './components/TestNinon'
 import EspaceClient from './components/EspaceClient'
 import RecapDevis from './components/RecapDevis'
+import Wait from './components/Wait'
 
 Vue.use(Router);
 
@@ -58,6 +59,11 @@ export default new Router({
       name: 'RecapDevis',
       path: '/recapdevis',
       component: RecapDevis
+    },
+    {
+      name: 'Wait',
+      path: '/wait',
+      component: Wait
     }
   ]
 });

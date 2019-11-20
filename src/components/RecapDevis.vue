@@ -33,7 +33,9 @@
             </router-link>
           </li>
           <li style="margin-left: 30px;">
-            <Button txt="Envoyer" />
+            <router-link to="/wait">
+              <Button txt="Envoyer" />
+            </router-link>
           </li>
         </ul>
       </form>
