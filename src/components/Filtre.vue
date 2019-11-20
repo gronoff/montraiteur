@@ -75,7 +75,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: flex-end;
+  align-items: center;
   background-color: #E5E5E5;
   height: 200px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -93,14 +93,11 @@ img{
 }
 
 #price_range{
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-width: 150px;
-}
-
-#price_range>img{
-  margin-bottom: 10px;
 }
 
 #date_event{
@@ -119,13 +116,9 @@ img{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 30px;
   margin-left: 5%;
   margin-right: -5%;
-}
-
-#select_boxes p{
-  display: block;
+  margin-bottom: 10px;
   font-size: 14px;
   line-height: 24px;
   color: var(--grisFonce);
@@ -139,41 +132,21 @@ img{
   #filter{
     flex-direction: column;
     height: 100%;
-    align-items: flex-start;
+    justify-content: space-between;
   }
 
   #filter>div{
     width: 100%;
   }
 
-  #price_range{
-    margin-top: 50px;
-  }
-
   #select_boxes{
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    margin-bottom: 30px;
     margin-left: 0;
-  }
-
-  #select_boxes p{
-    display: block;
-    margin-bottom: 0;
-    font-size: 14px;
-    line-height: 24px;
-    color: var(--grisFonce);
   }
 
   .inputForm{
     margin-left: 0;
   }
-
-  .inputForm>input{
-    margin-bottom: 0;
-  }
-
 }
 
 </style>
