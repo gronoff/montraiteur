@@ -14,16 +14,19 @@ export default {
   },
   methods:{
     addToFavorite: function(){
+      //lorsque l'utilisateur clique, l'image change
       if (this.lien_src == this.image_unactive){
         this.lien_src = this.image_active;
       }
       else if(this.lien_src ==  this.image_active){
         this.lien_src = this.image_unactive;
       }
+      //TODO: implémenter pour permettre un ajout aux favoris de l'utilisateur en fonction des conditions
     }
   }
 }
 </script>
+
 
 <style scoped>
 
