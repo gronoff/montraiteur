@@ -1,6 +1,6 @@
 <template>
-  <div class="inputForm" :style="`display:${display}; padding-top:${paddingTop}; width:${width};`" >
-    <input type="checkbox" :name="name" :id="id" />
+  <div class="inputForm" :style="`display:${display}; padding-top:${paddingTop}; width:${width};`">
+    <input type="checkbox" :name="name" :id="id" v-model="checked" :disabled="disabled" />
     <label :for="id">{{ label }}</label>
   </div>
 </template>
@@ -14,7 +14,9 @@ export default {
     name: String,
     display: String,
     width: String,
-    paddingTop: String
+    paddingTop: String,
+    checked: Boolean,
+    disabled: Boolean
   }
 }
 </script>

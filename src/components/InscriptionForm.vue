@@ -14,13 +14,13 @@
         </div>
         <ul>
           <li>
-            <Button txt="Annuler" type="reset" />
+            <router-link to="/">
+              <Button txt="Annuler" type="reset" />
+            </router-link>
           </li>
           <li style="margin-left: 30px;">
             <router-link to="/espaceclient">
-            <Button txt="Envoyer"
-            
-            />
+              <Button txt="Envoyer" />
             </router-link>
           </li>
         </ul>

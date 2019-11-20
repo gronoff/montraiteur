@@ -8,6 +8,7 @@ import TestDimitri from './components/TestDimitri'
 import TestAude from './components/TestAude'
 import TestNinon from './components/TestNinon'
 import EspaceClient from './components/EspaceClient'
+import RecapDevis from './components/RecapDevis'
 
 Vue.use(Router);
 
@@ -52,7 +53,11 @@ export default new Router({
       name: 'EspaceClient',
       path: '/espaceclient',
       component: EspaceClient
-
+    },
+    {
+      name: 'RecapDevis',
+      path: '/recapdevis',
+      component: RecapDevis
     }
   ]
 });

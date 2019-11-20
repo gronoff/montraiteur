@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Header />
     <div class="form">
       <h2>Créer une fiche traiteur</h2>
       <form action="" method="post">
@@ -51,7 +50,7 @@
           <Input type="number" label="Nombre de couverts maximum" id="minCouverts" value="1" display="inline-block" />
 
           <div class="calendar">
-            <label>Disponiblités</label>
+            <label>Disponibilités</label>
             <img src="../assets/img/calendar1.png">
             <img src="../assets/img/calendar2.png">
           </div>
@@ -66,27 +65,22 @@
         </ul>
       </form>
     </div>
-    <Footer />
   </div>
 </template>
 
 <script>
-import Header from './Header'
 import Input from './Input'
 import InputTextArea from './InputTextArea'
 import InputCheckbox from './InputCheckbox'
 import Button from './Button'
-import Footer from './Footer'
 
 export default {
   name: 'TraiteurForm',
   components: {
-    Header,
     Input,
     InputTextArea,
     InputCheckbox,
-    Button,
-    Footer
+    Button
   }
 }
 </script>
@@ -102,6 +96,7 @@ export default {
   span {
     font-size: 14px;
     line-height: 24px;
+    margin-left: 30px;
   }
   .backgroundForm {
     background: var(--vertClair);
