@@ -58,13 +58,14 @@ export default {
   color: rgba(114, 158, 161, 0.7);
   margin-bottom: 15px;
   padding-right: 25px;
+  margin-left: 25px;
 }
 
 .flex-container {
   display: flex;
-  justify-content: space-evenly;
   flex-direction: row;
   flex-wrap: wrap;
+
 }
 
 ul {
@@ -72,6 +73,9 @@ ul {
   margin-left: 0;
   padding-left: 5;
   margin-right: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 li {
   margin-bottom: 25px; /* à adapter */
@@ -112,6 +116,10 @@ button {
 .jumbotron {
   display: flex;
   justify-content: center;
+}
+
+section {
+  margin-left: 100px;
 }
 
 </style>
