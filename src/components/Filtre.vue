@@ -75,16 +75,12 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-end;
   background-color: #E5E5E5;
   height: 200px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
   margin-bottom: 1%;
-}
-
-#filter>div{
-  width: 25%;
 }
 
 img{
@@ -97,7 +93,9 @@ img{
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 25%;
   min-width: 150px;
+  margin-bottom: 10px;
 }
 
 #date_event{
@@ -116,15 +114,13 @@ img{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 5%;
-  margin-right: -5%;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   font-size: 14px;
   line-height: 24px;
   color: var(--grisFonce);
 }
 
-@media(max-width:720px){
+@media(max-width:675px){
   .icon_in_filter{
     display: none;
   }
@@ -147,6 +143,11 @@ img{
   .inputForm{
     margin-left: 0;
   }
+
+  #price_range>img{
+    width: 180px;
+  }
+
 }
 
 </style>
