@@ -18,7 +18,10 @@
         </li>
       </ul>
     </aside>
-    <section> Carroussel </section>
+    <section> 
+        <CarouselForNinon />
+
+    </section>
     <article>
         <p> Mon Profil </p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quos ad corrupti ut possimus autem facere quisquam numquam sunt itaque nulla, amet quia, minima quod, assumenda cumque id veniam odit?</p>
@@ -33,10 +36,11 @@
 import Button from './Button'
 import Header from './Header'
 import Footer from './Footer'
+import CarouselForNinon from './CarouselForNinon'
 
 export default {
   name: "EspaceClient",
-  components: {Header, Button, Footer},
+  components: {Header, Button, Footer, CarouselForNinon},
   data: function() {
     return {
       commands: [

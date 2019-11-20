@@ -1,58 +1,43 @@
 <template>
-  <div>
-    <label :for="id">{{ label }}</label>
-    <input
-      :type="search"
-      :name="name"
-      :id="id"
-      :placeholder="placeholder"
-      v-bind:style="styleObject"
-    />
+  <div
+    :style="{'color': superStyle.color, 
+  'backgroundColor':superStyle.backgroundColor,
+  'fontSize': superStyle.fontSize
+  }"
+  >
+    <form>
+      <label :for="id">{{ label }}</label><br/>
+
+      <input :type="type" :name="name" :placeholder="placeholder" :results=$results />
+      
+    </form>
   </div>
 </template>
 
 <script>
-
 export default {
   name: "InputSearch",
+
+  data: function() {
+    return {
+      superStyle: {
+        color: "#729EA1",
+        backgroundColor: "#FFFBFE",
+        fontSize: "18px"
+      }
+    };
+  },
 
   props: {
     label: String,
     type: String,
     id: String,
     placeholder: String,
-    customColor:{
-      type: String,
-      default: "black"
-    },
-    customBackgroundColor:{
-      type: String,
-      default: "white"
-    },
-    customBoxShadow:{
-      type: Number,
-      default: 0
-    },
-    customHeight:{
-      type: Number,
-      default: 40
-    }
-
-  },
-
-  computed: {
-    styleObject() {
-      return{
-        "background-color":this.customBackgroundColor,
-        "color":this.customColor,
-        "box-shadow":`${this.customBoxShadow}px`,
-        "height": `${this.customHeight}px`,
-        
-      }
-    }
+    name: String,
+    results: Number
   }
 };
 </script>
 
-<style scoped>
+<style scoped >
 </style>
