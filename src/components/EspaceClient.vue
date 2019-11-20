@@ -1,6 +1,7 @@
 <template>
   <div>
     <Header/>
+    <Jumbotron />
     <nav>Mon compte</nav>
 
     <div class="flex-container">
@@ -37,10 +38,11 @@ import Button from './Button'
 import Header from './Header'
 import Footer from './Footer'
 import CarouselForNinon from './CarouselForNinon'
+import Jumbotron from './Jumbotron'
 
 export default {
   name: "EspaceClient",
-  components: {Header, Button, Footer, CarouselForNinon},
+  components: {Header, Button, Footer, CarouselForNinon,Jumbotron},
   data: function() {
     return {
       commands: [
@@ -85,7 +87,7 @@ export default {
 }
 
 p {
-    margin-left: 10px
+    margin-left: 5px
 }
 
 ul {

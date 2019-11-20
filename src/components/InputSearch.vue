@@ -29,7 +29,7 @@ export default {
       superStyle: {
         color: "#729EA1",
         backgroundColor: "#FFFFFF",
-        fontSize: "24px",
+        fontSize: "18px",
         borderRadius: "15px"
       }
     };
@@ -61,9 +61,9 @@ input {
   border-radius: 5px;
   border-color: rgb(214, 214, 214);
   border: 0 none;
-  width: 100%;
-  padding: 30px 30px;
-  margin: 8px;
+  width: 90%;
+  padding: 20px 20px;
+  margin: 6px;
   box-sizing: border-box;
   box-shadow: 4px 4px 4px rgba(226, 221, 221, 0.25);
 }
@@ -71,7 +71,7 @@ input {
 ::placeholder {
   color: #d2e0bf;
 
-  height: 80px;
-  font-size: 40px;
+  height: 50px;
+  font-size: 18px;
 }
 </style>

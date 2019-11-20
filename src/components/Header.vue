@@ -11,7 +11,7 @@
     <div class="liens">
       <a href="mailto:" class="lienTxt">{{traiteur.name}}</a>
       <span>|</span>
-      <router-link to='inscription' class="lienTxt">Connection</router-link>
+      <router-link to='inscription' class="lienTxt">Connexion</router-link>
     </div>
 
   </header>
