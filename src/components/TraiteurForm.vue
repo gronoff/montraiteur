@@ -2,7 +2,7 @@
   <div>
     <div class="form">
       <h2>Créer une fiche traiteur</h2>
-      <form action="" method="post">
+      <form>
         <fieldset class="backgroundForm">
           <legend>Coordonnées</legend>
           <Input type="text" label="Nom de l'entreprise" id="name" paddingTop="30px" required="true" />
@@ -60,7 +60,9 @@
             <Button txt="Annuler" type="reset" />
           </li>
           <li style="margin-left: 30px;">
+            <router-link to="/EspaceAdmin">
             <Button txt="Envoyer" type="submit" />
+            </router-link>
           </li>
         </ul>
       </form>
