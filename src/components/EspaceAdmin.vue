@@ -9,17 +9,21 @@
     <div class="flex-container">
     <aside class="barre_laterale">
       <p>Menu</p> <br/>
+      <button v-on:click="$router.push({ name: 'NewTraiteur' })">test</button>
       <ul>
         <li v-for="(command,name) in commands" :key="name">
           {{command.name}}
           <br />
-          <Button txt="voir" type="submit" />
+          <Button txt="voir" v-on:click="test"/>
           <Button txt="modifier" type="submit" />
         </li>
       </ul>
     </aside>
-    <section> 
+    <section v-if="$route.name=='EspaceAdmin'"> 
         <CarouselForNinon />
+    </section>
+    <section v-else-if="$route.name=='NewTraiteur'">
+        <router-view />
     </section>
     <div class="listingClients">
       <img src=../assets/img/listingclients.png>
@@ -57,6 +61,11 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    test: function() {
+      window.alert("test")
+    }
   }
 };
 </script>
@@ -65,15 +74,14 @@ export default {
 .barre_laterale {
   background-color: rgba(247, 245, 247, 100%);
   color: rgba(114, 158, 161, 0.7);
-  margin-right: 150px;
   margin-bottom: 30px;
 }
 
 .flex-container {
   display: flex;
+  justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-left: 100px;
 }
 
 p {
@@ -106,7 +114,6 @@ button {
 }
 
 .listingClients {
-  margin-left: 250px;
   margin-bottom: 50px;
 }
 

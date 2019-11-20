@@ -10,6 +10,7 @@ import TestNinon from './components/TestNinon'
 import EspaceClient from './components/EspaceClient'
 import RecapDevis from './components/RecapDevis'
 import Wait from './components/Wait'
+import EspaceAdmin from './components/EspaceAdmin'
 
 Vue.use(Router);
 
@@ -24,11 +25,6 @@ export default new Router({
       name: 'inscription',
       path: '/inscription',
       component: InscriptionForm
-    },
-    {
-      name: 'newTraiteur',
-      path: '/newTraiteur',
-      component: TraiteurForm
     },
     {
       name: 'TestAdrien',
@@ -64,6 +60,19 @@ export default new Router({
       name: 'Wait',
       path: '/wait',
       component: Wait
-    }
+    },
+    {
+      name: 'EspaceAdmin',
+      path: '/espaceadmin',
+      component: EspaceAdmin,
+      children: [
+        {
+          name: 'NewTraiteur',
+          path: ':newTraiteur',
+          props: true,
+          component: TraiteurForm
+        }
+      ]
+    },
   ]
 });

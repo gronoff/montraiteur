@@ -60,7 +60,6 @@ export default {
 <style scoped>
   /* SLIDES */
   .cbzh-slides {
-    width: 779px;
     height: 432px;
     position: relative;
   }
