@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="filter">
-      <p id="search_title">Affiner votre recherche:</p>
+      <p id="search_title">Affiner votre recherche :</p>
       <div id="price_range">
         <img src="../assets/img/price_range.png" alt="bouton de filtrage du prix">
       </div>
@@ -81,6 +81,7 @@ export default {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
   margin-bottom: 2%;
+  padding-bottom: 1%;
 }
 
 #filter select {

@@ -129,7 +129,7 @@ export default {
   border-radius: 10px;
   margin-right: 1%;
   flex-basis: auto;
-  width: 75%;
+  width: 70%;
   min-width: 250px;
 }
 
