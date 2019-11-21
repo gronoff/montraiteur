@@ -6,10 +6,10 @@
 
     <div class="flex-container">
     <aside class="barre_laterale">
-      <p>Mon historique de commandes</p> <br/>
+      <p>Mon historique de devis</p> <br/>
       <ul>
         <li v-for="(command,id) in commands" :key="id">
-          Référence: commande n°{{command.id}}
+          Référence: devis n°{{command.id}}
           <br />
           en date du {{command.date}}
           <br />
